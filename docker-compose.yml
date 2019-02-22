@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  ses:
+    container_name: ses
+    build:
+      context: .
+      args:
+        NODE_ENV=development
+    image: containers.bluebook.io/fxtrader/stock-exchange-service
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./src:/usr/src/app/src"
+      - "./config:/usr/src/app/config"
+      - "./index.js:/usr/src/app/index.js"

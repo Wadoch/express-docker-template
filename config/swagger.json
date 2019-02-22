@@ -1,0 +1,22 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Stock Exchange Service",
+    "description": "This is service which handle all communication between whole fxTrader app and outside tradings apps (currently only OANDA)",
+    "version": "1.0.0"
+  },
+  "host": "localhost:8101",
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "description": "Check if api is working",
+        "responses": {
+          "default": {
+            "description": "{\"status\": 200, \"message:\" \"OK\"}"
+          }
+        }
+      }
+    }
+  }
+}
